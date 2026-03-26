@@ -1,0 +1,70 @@
+/* pages/home/home.wxss */
+.home-container {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 40rpx;
+}
+
+/* 顶部欢迎栏 */
+.header {
+  background: linear-gradient(90deg, #6a8cfa 0%, #87b6ff 100%);
+  color: #fff;
+  padding: 40rpx;
+  border-radius: 20rpx;
+  margin-bottom: 60rpx;
+  box-shadow: 0 8rpx 20rpx rgba(106, 140, 250, 0.3);
+}
+
+.welcome {
+  font-size: 44rpx;
+  font-weight: bold;
+  margin-bottom: 16rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+/* 功能模块网格 */
+.module-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30rpx;
+  margin-bottom: 60rpx;
+}
+
+.module-item {
+  background: #fff;
+  padding: 40rpx 20rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+
+.module-item:active {
+  transform: scale(0.98);
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.1);
+}
+
+.module-icon {
+  font-size: 60rpx;
+  margin-bottom: 20rpx;
+}
+
+.module-title {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 底部小贴士 */
+.tips {
+  background: #e8f4ff;
+  padding: 24rpx;
+  border-radius: 16rpx;
+  text-align: center;
+  color: #666;
+  font-size: 26rpx;
+}

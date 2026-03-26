@@ -1,0 +1,33 @@
+<!--pages/home/home.wxml-->
+<view class="home-container">
+  <!-- 顶部欢迎栏 -->
+  <view class="header">
+    <view class="welcome">欢迎回来，{{userInfo.username || '用户'}} 👋</view>
+    <view class="subtitle">今天也要关注健康哦~</view>
+  </view>
+
+  <!-- 功能模块网格 -->
+  <view class="module-grid">
+    <view class="module-item" bindtap="goToPage" data-page="consult">
+      <view class="module-icon">🩺</view>
+      <view class="module-title">医疗咨询</view>
+    </view>
+    <view class="module-item" bindtap="goToPage" data-page="check">
+      <view class="module-icon">📋</view>
+      <view class="module-title">自我检测</view>
+    </view>
+    <view class="module-item" bindtap="goToPage" data-page="system">
+      <view class="module-icon">📊</view>
+      <view class="module-title">健康系统</view>
+    </view>
+    <view class="module-item" bindtap="goToPage" data-page="tcm">
+      <view class="module-icon">🌿</view>
+      <view class="module-title">中医理疗</view>
+    </view>
+  </view>
+
+  <!-- 底部健康小贴士 -->
+  <view class="tips">
+    <text>💡 今日小贴士：规律作息，均衡饮食，保持好心情~</text>
+  </view>
+</view>
