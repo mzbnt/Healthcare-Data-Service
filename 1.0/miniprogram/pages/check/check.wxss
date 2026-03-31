@@ -21,7 +21,8 @@
   border-radius: 12rpx;
   box-shadow: 0 20rpx 100rpx rgba(0, 0, 0, 0.08);
   width: 120%;
-  box-sizing: border - box;
+  box-sizing: border-box;
+  text-align: start;
 
 }
 

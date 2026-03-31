@@ -1,49 +1,43 @@
+// pages/home/home.js
 Page({
   data: {
-      userInfo: {}
+    userInfo: {}
   },
 
   onLoad() {
-      // 获取本地存储的用户信息
-      const userInfo = wx.getStorageSync('userInfo') || {};
-      this.setData({ userInfo });
+    const userInfo = wx.getStorageSync('userInfo') || {};
+    this.setData({ userInfo });
 
-      // 未登录则跳回登录页
-      if (!userInfo.username) {
-          wx.redirectTo({
-              url: '/pages/login/login'
-          });
-      }
-  },
-
-  // 跳转到对应功能页面
-  goToPage(e) {
-      const page = e.currentTarget.dataset.page;
-      const pageMap = {
-          'consult': '/pages/consult/consult',  // 医疗咨询
-          'check': '/pages/check/check',        // 自我检测
-          'system': '/pages/system/system',    // 健康系统
-          'tcm': '/pages/tcm/tcm'              // 中医理疗
-      };
-      // 从映射表中获取对应页面路径
-      const url = pageMap[page];
-      if (url) {
-          wx.navigateTo({
-              url: url
-          });
-      } else {
-          wx.showToast({
-              title: '功能暂未开放',
-              icon: 'none'
-          });
-      }
-  },
-
-  // 退出登录
-  logout() {
-      wx.removeStorageSync('userInfo');
-      wx.redirectTo({
-          url: '/pages/login/login'
+    // 未登录则跳回登录页（温和判断，防止闪退）
+    if (!userInfo || !userInfo.username) {
+      wx.reLaunch({
+        url: '/pages/login/login'
       });
+    }
+  },
+
+  // 功能跳转（和你原来的路径完全一致）
+  goToPage(e) {
+    const page = e.currentTarget.dataset.page;
+    const pageMap = {
+      'consult': '/pages/consult/consult',
+      'check': '/pages/check/check',
+      'system': '/pages/system/system',
+      'tcm': '/pages/tcm/tcm'
+    };
+    const url = pageMap[page];
+    if (url) {
+      wx.navigateTo({ url });
+    } else {
+      wx.showToast({ title: '功能暂未开放', icon: 'none' });
+    }
+  },
+
+  // 退出登录（保留原逻辑）
+  logout() {
+    wx.removeStorageSync('userInfo');
+    wx.reLaunch({
+      url: '/pages/login/login'
+    });
   }
-})
+});
