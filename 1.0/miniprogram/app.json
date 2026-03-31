@@ -1,0 +1,16 @@
+{
+  "pages": [
+      "pages/login/login",
+      "pages/register/register",
+      "pages/home/home",
+      "pages/consult/consult",
+      "pages/check/check"
+  ],
+      "window": {
+      "navigationBarTitleText": "健康管家",
+          "navigationBarBackgroundColor": "#6a8cfa",
+              "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+      "sitemapLocation": "sitemap.json"
+}

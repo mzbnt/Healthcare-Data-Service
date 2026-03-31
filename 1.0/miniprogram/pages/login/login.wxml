@@ -1,0 +1,37 @@
+<!--pages/login/login.wxml-- >
+    <view class="login-container">
+        <!-- 标题区域 -->
+        <view class="title">欢迎回来</view>
+        <view class="subtitle">请登录您的账号</view>
+
+        <!-- 用户名输入框 -->
+        <view class="input-item">
+            <input class="input-content" placeholder="请输入用户名"
+                value="{{username}}" bindinput="onUsernameInput" />
+            <view class="input-icon">👤</view>
+        </view>
+
+        <!-- 密码输入框 -->
+        <view class="input-item">
+            <input class="input-content" placeholder="请输入密码" password
+                value="{{password}}" bindinput="onPasswordInput" />
+            <view class="input-icon">🔒</view>
+        </view>
+
+        <!-- 辅助选项 -->
+        <view class="option-row">
+            <view class="remember-me">
+                <checkbox checked />
+                <text>记住我</text>
+            </view>
+            <view class="forget-password" bindtap="onForgetPassword">忘记密码?</view>
+        </view>
+
+        <!-- 登录按钮 -->
+        <button class="login-btn" bindtap="onLogin">登录</button>
+
+        <!-- 注册入口 -->
+        <view class="register-tip">
+            还没有账号? <text class="register-link" bindtap="onGoRegister">立即注册</text>
+        </view>
+    

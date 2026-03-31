@@ -1,0 +1,51 @@
+<!--pages/check/check.wxml-->
+    <view class="container">
+        <view class="title">健康自我检测</view>
+
+        <form bindsubmit="formSubmit">
+            <!-- 年龄 -->
+            <view class="form-item">
+                <label>年龄</label>
+                <input type="number" name="age" placeholder="请输入年龄" min="1" max="120" required />
+            </view>
+
+            <!-- 身高 -->
+            <view class="form-item">
+                <label>身高 (cm)</label>
+                <input type="number" name="height" placeholder="请输入身高" min="50" max="250" required />
+            </view>
+
+            <!-- 体重 -->
+            <view class="form-item">
+                <label>体重 (kg)</label>
+                <input type="number" name="weight" placeholder="请输入体重" min="10" max="300" required />
+            </view>
+
+            <!-- 饮食习惯 -->
+            <view class="form-item">
+                <label>饮食习惯</label>
+                <picker name="diet" range="{{dietOptions}}" bindchange="dietChange">
+                    <view class="picker">{{ dietText }}</view>
+                </picker>
+            </view>
+
+            <!-- 运动状况 -->
+            <view class="form-item">
+                <label>运动状况</label>
+                <picker name="exercise" range="{{exerciseOptions}}" bindchange="exerciseChange">
+                    <view class="picker">{{ exerciseText }}</view>
+                </picker>
+            </view>
+
+            <!-- 其他备注 -->
+            <view class="form-item">
+                <label>其他健康状况备注（选填）</label>
+                <textarea name="remark" placeholder="请输入其他健康相关信息" maxlength="200"></textarea>
+            </view>
+
+            <!-- 提交按钮 -->
+            <view class="btn-box">
+                <button form-type="submit" type="primary">提交检测</button>
+            </view>
+        </form>
+    </view>
