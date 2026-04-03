@@ -1,0 +1,33 @@
+<!-- 轮播图（4张图片，正确格式） -->
+<swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="3000" duration="500">
+  <swiper-item>
+    <image src="/images/IMG_20260403_150558.png" mode="aspectFill" class="banner-img"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/IMG_20260403_150558.png" mode="aspectFill" class="banner-img"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/IMG_20260403_150558.png" mode="aspectFill" class="banner-img"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/IMG_20260403_150558.png" mode="aspectFill" class="banner-img"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 6宫格 -->
+<view class="grid-container">
+  <view class="grid-item" wx:for="{{gridList}}" wx:key="id" bindtap="onGridItemTap" data-item="{{item}}">
+    <image src="{{item.icon}}" class="grid-icon"></image>
+    <text class="grid-text">{{item.name}}</text>
+  </view>
+</view>
+
+<!-- 底部按钮 -->
+<view class="btn-container">
+  <view class="btn-item btn-red" bindtap="goShop">
+    <text class="btn-text">健康系统</text>
+  </view>
+  <view class="btn-item btn-blue" bindtap="goFriend">
+    <text class="btn-text">个人中心</text>
+  </view>
+</view>
