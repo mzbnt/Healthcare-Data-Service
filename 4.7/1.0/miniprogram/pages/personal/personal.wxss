@@ -1,0 +1,61 @@
+page {
+  background-color: #f2f7ff;
+}
+
+.container {
+  padding: 30rpx;
+}
+
+/* 用户卡片 */
+.user-card {
+  background: linear-gradient(135deg, #4e7fff, #3366ff);
+  border-radius: 24rpx;
+  padding: 50rpx 30rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+  box-shadow: 0 8rpx 20rpx rgba(78, 127, 255, 0.15);
+}
+
+.avatar-box {
+  margin-right: 30rpx;
+}
+
+.avatar {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  background-color: #e6eeff;
+  border: 4rpx solid rgba(255, 255, 255, 0.3);
+}
+
+.name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 菜单 */
+.menu-group {
+  background-color: #fff;
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0, 80, 255, 0.05);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32rpx 36rpx;
+  font-size: 30rpx;
+}
+
+.menu-text {
+  color: #333;
+}
+
+.arrow {
+  color: #999;
+  font-size: 32rpx;
+}

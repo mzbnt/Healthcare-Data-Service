@@ -1,0 +1,73 @@
+.home-container {
+  padding: 30rpx;
+  background-color: #f7f8fa;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.welcome-card {
+  background: linear-gradient(90deg, #409eff, #69b1ff);
+  color: white;
+  padding: 40rpx 30rpx;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.welcome-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.welcome-desc {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+.module-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.module-item {
+  width: 47%;
+  background: white;
+  border-radius: 20rpx;
+  padding: 40rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+}
+
+.module-icon {
+  font-size: 50rpx;
+  margin-bottom: 16rpx;
+}
+
+.module-item text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.tip-card {
+  margin-top: 40rpx;
+  background: #fff5cc;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.tip-icon {
+  font-size: 32rpx;
+}
+
+.tip-text {
+  font-size: 26rpx;
+  color: #996c00;
+  line-height: 1.6;
+}

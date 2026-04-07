@@ -1,0 +1,145 @@
+<view class="container">
+  <!-- 顶部标题卡片 -->
+  <view class="header-card">
+    <text class="title">健康信息采集</text>
+    <text class="subtitle">为您生成个性化健康报告</text>
+  </view>
+
+  <!-- 表单主体 -->
+  <form bindsubmit="formSubmit">
+    <!-- 基础信息区 -->
+    <view class="card">
+      <view class="card-title">基础信息</view>
+
+      <view class="item-group">
+        <view class="form-item">
+          <text class="label">年龄 *</text>
+          <input 
+            type="number" 
+            name="age" 
+            placeholder="请输入您的年龄" 
+            class="input"
+          />
+        </view>
+
+        <view class="form-item">
+          <text class="label">身高 (cm) *</text>
+          <input 
+            type="number" 
+            name="height" 
+            placeholder="例如：175" 
+            class="input"
+          />
+        </view>
+
+        <view class="form-item">
+          <text class="label">体重 (kg) *</text>
+          <input 
+            type="number" 
+            name="weight" 
+            placeholder="例如：65" 
+            class="input"
+          />
+        </view>
+      </view>
+    </view>
+
+    <!-- 血压血糖区 -->
+    <view class="card">
+      <view class="card-title">血压血糖</view>
+
+      <view class="item-group">
+        <view class="form-item">
+          <text class="label">收缩压 (高压) *</text>
+          <input 
+            type="number" 
+            name="bpHigh" 
+            placeholder="例如：120" 
+            class="input"
+          />
+        </view>
+
+        <view class="form-item">
+          <text class="label">舒张压 (低压) *</text>
+          <input 
+            type="number" 
+            name="bpLow" 
+            placeholder="例如：80" 
+            class="input"
+          />
+        </view>
+
+        <view class="form-item">
+          <text class="label">血糖 (mmol/L) *</text>
+          <input 
+            type="number" 
+            name="bloodSugar" 
+            placeholder="例如：5.6" 
+            class="input"
+          />
+        </view>
+      </view>
+    </view>
+
+    <!-- 健康习惯区 -->
+    <view class="card">
+      <view class="card-title">生活习惯</view>
+
+      <view class="item-group">
+        <!-- 饮食习惯 -->
+        <view class="form-item">
+          <text class="label">饮食习惯</text>
+          <picker range="{{dietOptions}}" bindchange="dietChange">
+            <view class="picker-text">{{dietText}}</view>
+          </picker>
+        </view>
+
+        <!-- 运动状况 -->
+        <view class="form-item">
+          <text class="label">运动状况</text>
+          <picker range="{{exerciseOptions}}" bindchange="exerciseChange">
+            <view class="picker-text">{{exerciseText}}</view>
+          </picker>
+        </view>
+
+        <!-- 血脂状况 -->
+        <view class="form-item">
+          <text class="label">血脂状况</text>
+          <picker range="{{lipidOptions}}" bindchange="lipidChange">
+            <view class="picker-text">{{lipidText}}</view>
+          </picker>
+        </view>
+
+        <!-- 睡眠质量 -->
+        <view class="form-item">
+          <text class="label">睡眠质量</text>
+          <picker range="{{sleepOptions}}" bindchange="sleepChange">
+            <view class="picker-text">{{sleepText}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+
+    <!-- 其他信息 -->
+    <view class="card">
+      <view class="card-title">补充说明</view>
+      <view class="form-item">
+        <textarea 
+          name="other" 
+          placeholder="如有其他健康情况可填写这里（选填）"
+          class="textarea"
+        ></textarea>
+      </view>
+    </view>
+
+    <!-- 提交按钮 -->
+    <view class="btn-area">
+      <button 
+        form-type="submit" 
+        class="submit-btn"
+      >
+        生成健康报告
+      </button>
+    </view>
+  </form>
+</view>

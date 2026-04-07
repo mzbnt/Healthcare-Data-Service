@@ -1,0 +1,34 @@
+<!--pages/function/function.wxml-->
+<view class="home-container">
+  <!-- 欢迎卡片 -->
+  <view class="welcome-card">
+    <view class="welcome-title">欢迎使用健康管理 👋</view>
+    <view class="welcome-desc">今天也要关注健康哦~</view>
+  </view>
+
+  <!-- 功能模块网格 -->
+  <view class="module-grid">
+    <view class="module-item" bindtap="goToPage" data-page="consult">
+      <view class="module-icon">🩺</view>
+      <text>医疗咨询</text>
+    </view>
+    <view class="module-item" bindtap="goToPage" data-page="check">
+      <view class="module-icon">📋</view>
+      <text>自我检测</text>
+    </view>
+    <view class="module-item" bindtap="goToPage" data-page="system">
+      <view class="module-icon">🧠</view>
+      <text>心理健康</text>
+    </view>
+    <view class="module-item" bindtap="goToPage" data-page="tcm">
+      <view class="module-icon">🌿</view>
+      <text>中医理疗</text>
+    </view>
+  </view>
+
+  <!-- 今日小贴士 -->
+  <view class="tip-card">
+    <text class="tip-icon">💡</text>
+    <text class="tip-text">今日小贴士：规律作息，均衡饮食，保持好心情~</text>
+  </view>
+</view>

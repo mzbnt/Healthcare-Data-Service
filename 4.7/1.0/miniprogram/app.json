@@ -1,0 +1,25 @@
+{
+  "pages": [
+      "pages/login/login",
+      "pages/register/register",
+      "pages/home/home",
+      "pages/consult/consult",
+      "pages/check/check",
+      "pages/result/result",
+      "pages/history/history",
+      "pages/system/system",
+      "pages/function/function",
+      "pages/personal/personal",
+      "pages/tcm/tcm",
+      "pages/advice/advice",
+      "pages/tcmc/tcmc",
+      "pages/herbs/herbs"
+  ],
+      "window": {
+      "navigationBarTitleText": "健康管家",
+          "navigationBarBackgroundColor": "#6a8cfa",
+              "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+      "sitemapLocation": "sitemap.json"
+}

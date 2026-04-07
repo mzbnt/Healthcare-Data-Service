@@ -1,0 +1,33 @@
+<!-- 轮播图 -->
+<swiper class="swiper" indicator-dots autoplay interval="3000" duration="500">
+  <swiper-item>
+    <image src="/images/icon_1.png" class="banner-img" mode="aspectFill"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/icon_2.png" class="banner-img" mode="aspectFill"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/icon_3.png" class="banner-img" mode="aspectFill"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="/images/icon_4.png" class="banner-img" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 6宫格 -->
+<view class="grid-container">
+  <view class="grid-item" wx:for="{{gridList}}" wx:key="id" bindtap="onGridItemTap" data-item="{{item}}">
+    <image src="{{item.icon}}" class="grid-icon" mode="aspectFit"></image>
+    <text class="grid-text">{{item.name}}</text>
+  </view>
+</view>
+
+<!-- 底部两个按钮 -->
+<view class="btn-box">
+  <view class="btn btn-red" bindtap="goHealth">
+    <text>健康系统</text>
+  </view>
+  <view class="btn btn-blue" bindtap="goMine">
+    <text>个人中心</text>
+  </view>
+</view>

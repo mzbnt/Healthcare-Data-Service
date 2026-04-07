@@ -1,0 +1,72 @@
+/* pages/consult/consult.wxss */
+.consult-container {
+  padding: 20rpx;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 40rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+.search-input {
+  flex: 1;
+  height: 60rpx;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+}
+.search-btn {
+  padding: 0 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #6a8cfa;
+  color: #fff;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+
+.result-area {
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+.result-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+.result-item {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+.result-item:last-child {
+  border-bottom: none;
+}
+.result-name {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 10rpx;
+}
+.result-desc {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.5;
+}
+
+.empty-tip {
+  text-align: center;
+  padding: 100rpx 0;
+  color: #999;
+  font-size: 28rpx;
+}
+
+

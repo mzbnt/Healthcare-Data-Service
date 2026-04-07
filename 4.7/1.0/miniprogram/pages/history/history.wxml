@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="page-title">历史体检记录</view>
+
+  <view wx:for="{{historyList}}" wx:key="_id" class="card" bindtap="viewDetail" data-item="{{item}}">
+    <view class="time">{{item.checkTime}}</view>
+    <view class="info">BMI：{{item.bmi}} {{item.bmiLevel}}</view>
+    <view class="info">血压：{{item.bp}}</view>
+    <view class="info">血糖：{{item.sugar}}</view>
+  </view>
+
+  <view wx:if="{{historyList.length === 0}}" class="empty">
+    暂无体检记录
+  </view>
+</view>

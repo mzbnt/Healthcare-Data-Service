@@ -1,0 +1,73 @@
+<view class="container">
+  <view class="paper">
+    <view class="title">健康体检电子报告单</view>
+
+    <view class="section">
+      <view class="label">报告单编号</view>
+      <view class="value">{{report.reportNo}}</view>
+    </view>
+    <view class="section">
+      <view class="label">检测时间</view>
+      <view class="value">{{report.checkTime}}</view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="section">
+      <view class="label">年龄</view>
+      <view class="value">{{report.age}} 岁</view>
+    </view>
+    <view class="section">
+      <view class="label">身高</view>
+      <view class="value">{{report.height}}</view>
+    </view>
+    <view class="section">
+      <view class="label">体重</view>
+      <view class="value">{{report.weight}}</view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="section">
+      <view class="label">血压</view>
+      <view class="value">{{report.bp}}（{{report.bpLevel}}）</view>
+    </view>
+    <view class="section">
+      <view class="label">血糖</view>
+      <view class="value">{{report.sugar}}（{{report.sugarLevel}}）</view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="section">
+      <view class="label">饮食习惯</view>
+      <view class="value">{{report.diet}}</view>
+    </view>
+    <view class="section">
+      <view class="label">运动状况</view>
+      <view class="value">{{report.exercise}}</view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="bmi-box">
+      <view class="bmi-title">身体质量指数（BMI）</view>
+      <view class="bmi-num">{{report.bmi}}</view>
+      <view class="bmi-level">{{report.bmiLevel}}</view>
+    </view>
+
+    <view class="line"></view>
+
+    <view class="suggest-box">
+      <view class="suggest-title">健康建议</view>
+      <view class="suggest-content">{{report.suggest}}</view>
+    </view>
+    <view>血脂情况：{{data.lipid}}</view>
+    <view>睡眠质量：{{data.sleep}}</view>
+    <view class="footer">
+      <text>本报告为健康自测评估，不替代专业医疗诊断</text>
+    </view>
+
+    <button class="save-btn" bindtap="saveReport">保存体检报告</button>
+  </view>
+</view>
